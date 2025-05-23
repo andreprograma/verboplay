@@ -1,14 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Verbo Play</title>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Verbo Play - Streaming de Conteúdo</title>
+        <link rel="stylesheet" href="./index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <script src="./script.js"></script>
+        
     
-</head>
-<body>
-    <script src="./script.js"></script>
-    
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="header-left">
+                <a href="/" class="logo">
+                    <img src="/assets/media/icons/logo.svg" alt="Verbo Play" class="logo-img">
+                </a>
+                <nav class="main-nav">
+                    <a href="/" class="nav-link">Início</a>
+                    <a href="/filmes" class="nav-link">Filmes</a>
+                    <a href="/series" class="nav-link">Séries</a>
+                    <a href="/infantil" class="nav-link">Infantil</a>
+                </nav>
+            </div>
+
+            <div class="header-right">
+                <div class="search-container">
+                    <input type="text" placeholder="Pesquisar" class="search-input">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+                <a href="/profile" class="user-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </a>
+                <div class="auth-buttons">
+                    <button class="btn btn-outline">Login</button>
+                    <button class="btn btn-outline">Cadastrar-se</button>
+                    <button class="btn btn-donate">Doe para Verbo Play</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <section class="content-section">
+                <h2 class="section-title">Início</h2>
+                
+                <!-- Filmes Carousel -->
+                <div class="carousel-section">
+                    <h3 class="carousel-title">FILMES</h3>
+                    <div class="carousel-container">
+                        <button class="carousel-arrow carousel-arrow-left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        
+                        <div class="carousel-items">
+                            <div class="carousel-item">
+                                <div class="content-card">
+                                    <img src="/." alt="NOÉ" class="content-img">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="content-card">
+                                    <img src="images/elizabeth.jpg" alt="ELIZABETH" class="content-img">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="content-card">
+                                    <img src="images/paulo.jpg" alt="PAULO" class="content-img">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="content-card">
+                                    <img src="images/onze-passos.jpg" alt="ONZE PASSOS" class="content-img">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="carousel-arrow carousel-arrow-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Séries Carousel -->
+                <div class="carousel-section">
+                    <h3 class="carousel-title">SÉRIES</h3>
+                    <div class="carousel-container">
+                        <button class="carousel-arrow carousel-arrow-left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        
+                        <div class="carousel-items">
+                            <div class="carousel-item">
+                                <div class="content-card">
+                                    <img src="images/uma-garota.jpg" alt="UMA GAROTA" class="content-img">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="content-card">
+                                    <img src="images/daniel.jpg" alt="DANIEL" class="content-img">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="content-card">
+                                    <img src="images/escolhida.jpg" alt="ESCOLHIDA" class="content-img">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="carousel-arrow carousel-arrow-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Infantil Carousel -->
+                <div class="carousel-section">
+                    <h3 class="carousel-title">INFANTIL</h3>
+                    <div class="carousel-container">
+                        <button class="carousel-arrow carousel-arrow-left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        
+                        <div class="carousel-items">
+                            <div class="carousel-item">
+                                <div class="content-card">
+                                    <img src="images/aventuras.jpg" alt="AVENTURAS" class="content-img">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="content-card">
+                                    <img src="images/vida-de-jesus.jpg" alt="VIDA DE JESUS" class="content-img">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="content-card">
+                                    <img src="images/amor-vive.jpg" alt="AMOR VIVE" class="content-img">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="carousel-arrow carousel-arrow-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <img src="images/logo.png" alt="Verbo Play" class="footer-logo">
+            <p class="copyright">Copyright © 2023 VerboPlay. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
