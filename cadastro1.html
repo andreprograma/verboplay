@@ -1,0 +1,51 @@
+<!-- cadastro.html -->
+<section class="register">
+  <div class="auth-content">
+    <div class="auth-form">
+      <h1>Cadastro</h1>
+
+        
+      <form id="registerForm">
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Email" required />
+        </div>
+        <div class="form-group">
+          <input type="password" id="senha" placeholder="Senha" required />
+        </div>
+        <button type="submit" class="auth-button">Cadastrar</button>
+      </form>
+      <div class="auth-links">
+        <p>Já possui uma conta? <a href="/pages/login/login1.html">Faça login</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const registerForm = document.getElementById('registerForm');
+
+  registerForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+
+    // Pega o array de usuários no localStorage (ou cria vazio)
+    let users = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Verifica se email já existe
+    if(users.some(user => user.email === email)) {
+      alert('Esse email já está cadastrado!');
+      return;
+    }
+
+    // Adiciona novo usuário
+    users.push({ email, senha });
+
+    // Salva de volta no localStorage
+    localStorage.setItem('users', JSON.stringify(users));
+
+    alert('Conta criada com sucesso!');
+    window.location.href = 'login.html'; // redireciona para login
+  });
+</script>

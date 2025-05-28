@@ -1,0 +1,46 @@
+<!-- Seu código existente -->
+<section class="logintela">
+  <div class="auth-content">
+    <div class="auth-form">
+      <h1>Login</h1>
+      <form id="loginForm">
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Email" required />
+        </div>
+        <div class="form-group">
+          <input type="password" id="senha" placeholder="Senha" required />
+        </div>
+        <button type="submit" class="auth-button">Login</button>
+      </form>
+      <div class="auth-links">
+        <p>Não possui uma conta? <a id="crie" href="/pages/cadastro/cadastro1.html">Crie uma conta</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const loginForm = document.getElementById('loginForm');
+
+  loginForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+
+    // Pega usuários do localStorage
+    let users = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Verifica se existe usuário com email e senha
+    const user = users.find(user => user.email === email && user.senha === senha);
+
+    if(user) {
+      alert('Login realizado com sucesso!');
+      // Aqui você pode redirecionar para a página principal ou dashboard
+      window.location.href = 'userlogado.html'; // exemplo
+
+    } else {
+      alert('Email ou senha incorretos!');
+    }
+  });
+</script>   
