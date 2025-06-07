@@ -28,4 +28,143 @@
     border-color: brown;
     margin-bottom: auto;
     font-size: 15px;
-}
+}.container, section {
+    padding: 10px;
+    justify-content: center;
+    margin: 0;
+    display: flex;
+    background-color: #0f4d66;
+    width: auto;  
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: auto;
+   
+  }
+  section .container{
+     
+      margin: 0;
+      margin-right: 0;
+      margin-left: 0;
+  }
+  .login-box {
+      background-color: #0b3e53;
+    flex: 1;
+    padding: 60px 40px;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  
+  .login-box h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  
+  .input-field {
+    margin-bottom: 20px;
+  }
+  
+  
+  .input-field input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  
+  .forgot {
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: #ddd;
+    text-decoration: none;
+  }
+  
+  
+  .forgot:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .login-button {
+    background-color: #e0a529;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  
+  .register-link {
+    font-size: 12px;
+    margin-top: 15px;
+    color: #ddd;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  
+  .register-link:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .info-box{
+    flex: 1;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .logo{
+   
+      display: flex;
+    gap: 20px;
+  }
+  .logo img{
+    width: 100px;
+    height: 100px;
+  }
+  
+  
+  .tagline {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  
+  .categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .categories div {
+    display: flex;
+    flex-direction: column; /* <-- Coloca ícone acima do texto */
+    align-items: center;
+    color: white;
+  }
+  
+  
+  .categories img {
+    color:#ddd;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+  }
+  

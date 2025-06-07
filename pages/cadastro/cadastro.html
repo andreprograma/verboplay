@@ -7,70 +7,59 @@
     <link rel="stylesheet" href="/pages/cadastro/partials/cadastro.css">
     <link rel="stylesheet" href="/assets/css/global/style.css">
 
+
 </head>
 <body>
     <script src="./script.js"></script>
-    
-
-<!-- Header -->
-<header class="header">
-    <div class="container header-container">
-        <div class="header-left">
-            <a href="/pages/index/index.html" class="logo">
-                <img src="/assets/media/icons/logo.svg" alt="Verbo Play" class="logo-img">
-            </a>
-            <nav class="main-nav">
-                <a href="http://127.0.0.1:5500/pages/index/index.html" class="nav-link">Início</a>
-                    <a href="/pages/filmes/filmes.html" class="nav-link">Filmes</a>
-                    <a href="/pages/series/series.html" class="nav-link">Séries</a>
-                    <a href="/pages/infantil/infantil.html" class="nav-link">Infantil</a>
-                </nav>
-        </div>
-        <div class="header-right">
-            <div class="search-container">
-                <input type="text" placeholder="Pesquisar" class="search-input">
-                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-            </div>
-            <a href="/profile" class="user-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-            </a>
-            <div class="auth-buttons">
-                <a href="/pages/login/login.html"><button class="btn btn-outline">Login</button></a>
-                <a href="/pages/cadastro/cadastro.html"><button class="btn btn-outline">Cadastrar-se</button></a>
-                <a href="/pages/doacao/doe.html"><button class="btn btn-donate">Doe para Verbo Play</button></a>
-            </div>
-        </div>
-    </div>
-
-    <section class="logintela">
-        <div class="auth-content">
-            <div class="auth-form">
-                <h1>Cadastre-se</h1>
-                <form id="loginForm">
-                    <div class="form-group">
-                        <input type="nome" id="nomecompleto" placeholder="Digite seu nome completo" required>
+   
+    <!-- Header -->    
+        <body>
+            <section>
+                <div class="container">
+                    <div class="login-box">
+                        <h2>Cadastrar-se</h2>
+                        <div class="input-field">
+                            <input type="nome" placeholder="nome">
+                        </div>
+                        <div class="input-field">
+                            <input type="email" placeholder="E-mail">
+                        </div>
+                        <div class="input-field">
+                            <input type="password" placeholder="Senha">
+                        </div>
+                        <a class="forgot" href="../login/login.html">Já possui acesso? Faça o Login</a>
+                        <button class="login-button">Enter</button>
+                        <a class="register-link" href="../index/index.html">Voltar</a>
                     </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Email" required>
+                    <div class="info-box">
+                        <div class="logo" ><img src="/assets/media/icons/logosemfundo.svg" alt="logo"></div>
+                        <div class="tagline">CONTEÚDO CRISTÃO PARA TODA FAMÍLIA.</div>
+                        <div class="categories">
+                            <div class="logo">
+                                <div>
+                                    <img src="/assets/media/icons/logomovie.svg" alt="Filmes">
+                                    <span>Filmes</span>
+                                </div>
+                            </div>
+                            <div>
+                            <img src="/assets/media/icons/logotv.svg" alt="Séries">
+                            <span>Séries</span>
+                        </div>
+                        <div>
+                            <img src="/assets/media/icons/Infantillogo.svg" alt="Infantil">
+                            <span>Infantil</span>
+                        </div>
+                        </div>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <input type="password" id="senha" placeholder="Senha" required>
-                    </div>
-                    <button type="submit" class="auth-button">Login</button>
-                </form>
-                <div class="auth-links">
-                    <p>Já possui uma conta? </p>
-                    <a id="crie" href="cadastro.html">Fazer Login</a></p>
                 </div>
-            </div>
+            </section>
+        </body>
+        <footer class="footer">
+        <div class="container footer-container">
+            <img src="/assets/media/icons/logo.svg" alt="Verbo Play" class="footer-logo">
+            <p class="copyright">Copyright © 2023 VerboPlay. Todos os direitos reservados.</p>
         </div>
-    </div>
+    </footer>
 </body>
 </html>
