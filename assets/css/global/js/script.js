@@ -82,6 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const forgotLink = document.getElementById('forgot-link');
     forgotLink.addEventListener('click', (e) => {
       e.preventDefault(); // evita o comportamento padrão do link
-      alert('Um link para redefinir a senha foi enviado para o seu e-mail, caso ele esteja cadastrado em nosso sistema.');
+      alert('Um link para redefinir a senha será enviado para o seu e-mail, caso ele esteja cadastrado em nosso sistema.');
     });
   });
