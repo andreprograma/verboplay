@@ -33,12 +33,15 @@
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
                 </div>
-                <a href="/profile" class="user-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
-                </a>
+                <div class="user-icon" style="display: flex; align-items: center; gap: 10px;">
+                    <!-- Botão Voltar com ícone SVG de seta -->
+                    <button class="btn-voltar" aria-label="Voltar" onclick="voltarUsuario()" style="background:none; border:none; cursor:pointer; padding:0; margin:0;">
+                        <svg xmlns="/assets/media/icons/perfil.svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                          </svg>
+                    </button>
+                </div>
                 <div class="auth-buttons">
                     <a href="/pages/login/login.html"><button class="btn btn-outline">Login</button></a>
                     <a href="/pages/cadastro/cadastro.html"><button class="btn btn-outline">Cadastrar-se</button></a>
@@ -46,27 +49,11 @@
                 </div>
             </div>
         </div>
-    </header>
-
-            <div class="header-right">
-                <div class="search-container">
-                    <input type="text" placeholder="Pesquisar" class="search-input">
-                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                </div>
-                <a href="/profile" class="user-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
-                </a>
-                <div class="auth-buttons">
-                    <a href="/pages/login/login.html"><button class="btn btn-outline">Login</button></a>
-                    <a href="/pages/cadastro/cadastro.html"><button class="btn btn-outline">Cadastrar-se</button></a>
-                    <a href="/pages/doacao/doe.html"><button class="btn btn-donate">Doe para Verbo Play</button></a>
-                </div>
-            </div>
-        </div>
-    </header>
+           
+    <script>
+        function voltarUsuario() {
+          window.location.href = '/pages/usuario.html';
+        }
+      </script>
+</body>
+</html>
