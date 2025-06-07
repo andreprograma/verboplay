@@ -25,10 +25,11 @@
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      background-image: url('/assets/media/icons/fotousuario_padrao.png'); /* Altere para o caminho da imagem real se necessário */
+      background-image: url('/assets/media/icons/fotousuario_padrao.png'); /* padrão */
       background-size: cover;
       background-position: center;
       border: 3px solid white;
+      position: relative;
     }
 
     h2 {
@@ -69,12 +70,29 @@
     .btn-sair:hover {
       background-color: #b8000b;
     }
+
+    /* Botão trocar foto */
+    #btnTrocarFoto {
+      margin-top: 10px;
+      background-color: #28a745;
+      color: white;
+    }
+    #btnTrocarFoto:hover {
+      background-color: #1e7e34;
+    }
+
+    /* Esconde o input file */
+    #inputFileFoto {
+      display: none;
+    }
   </style>
 </head>
 <body>
 
   <div class="perfil">
-    <div class="foto-perfil"></div>
+    <div class="foto-perfil" id="fotoPerfil"></div>
+    <button class="btn" id="btnTrocarFoto">Trocar Foto</button>
+    <input type="file" accept="image/*" id="inputFileFoto" />
     <h2 id="nome-usuario">Usuário</h2>
   </div>
 
@@ -87,11 +105,44 @@
     const usuario = JSON.parse(localStorage.getItem('usuario'));
     const logado = localStorage.getItem('logado');
 
+    const fotoPerfilDiv = document.getElementById('fotoPerfil');
+    const btnTrocarFoto = document.getElementById('btnTrocarFoto');
+    const inputFileFoto = document.getElementById('inputFileFoto');
+
+    // Se não logado, redireciona
     if (logado !== 'true' || !usuario) {
       window.location.href = '/pages/login/login.html';
     } else {
       document.getElementById('nome-usuario').textContent = usuario.nome;
+
+      // Se tiver foto salva no localStorage, carrega
+      if (usuario.fotoBase64) {
+        fotoPerfilDiv.style.backgroundImage = `url(${usuario.fotoBase64})`;
+      }
     }
+
+    btnTrocarFoto.addEventListener('click', () => {
+      inputFileFoto.click();
+    });
+
+    inputFileFoto.addEventListener('change', (event) => {
+      const file = event.target.files[0];
+      if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const base64Image = e.target.result;
+          // Atualiza o background da foto
+          fotoPerfilDiv.style.backgroundImage = `url(${base64Image})`;
+          // Salva no objeto usuário e localStorage
+          usuario.fotoBase64 = base64Image;
+          localStorage.setItem('usuario', JSON.stringify(usuario));
+          alert('Foto de perfil atualizada com sucesso!');
+        };
+        reader.readAsDataURL(file);
+      } else {
+        alert('Por favor, selecione um arquivo de imagem válido.');
+      }
+    });
 
     function voltarInicio() {
       window.location.href = '/pages/index/index.html'; // Altere se necessário
