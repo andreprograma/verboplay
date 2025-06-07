@@ -85,3 +85,5 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('Um link para redefinir a senha será enviado para o seu e-mail, caso ele esteja cadastrado em nosso sistema.');
     });
   });
+
+  //janela modal para assistir ao filme/série - modelo filme noe

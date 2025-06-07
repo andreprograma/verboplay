@@ -1,0 +1,86 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    background-color: #101010;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.poster {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.content {
+    margin-left: 20px;
+    flex: 1;
+}
+
+.content h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.assistir-btn {
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.add-lista {
+    margin-top: 20px;
+    color: #ccc;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00263b;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+footer .logo {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+footer .logo span {
+    color: #f1c40f;
+}
+
+footer p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.doar-btn {
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
