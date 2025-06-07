@@ -49,8 +49,8 @@ button {
     align-items: center;
     gap: 2rem;
 }
-.logo img {
-    height: 80px;
+.logo .img {
+    height: 50px;
     width: 80px;
 }
 .logo-img {
