@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Página do Usuário - VerboPlay</title>
+  <link rel="stylesheet" href="/assets/css/global/style.css" />
+  <style>
+    body {
+      background-color: #0f4d66;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .perfil {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .foto-perfil {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-image: url('/assets/media/icons/fotousuario_padrao.png'); /* Altere para o caminho da imagem real se necessário */
+      background-size: cover;
+      background-position: center;
+      border: 3px solid white;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    .botoes {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-inicio {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .btn-inicio:hover {
+      background-color: #0056b3;
+    }
+
+    .btn-sair {
+      background-color: #d9000d;
+      color: white;
+    }
+
+    .btn-sair:hover {
+      background-color: #b8000b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="perfil">
+    <div class="foto-perfil"></div>
+    <h2 id="nome-usuario">Usuário</h2>
+  </div>
+
+  <div class="botoes">
+    <button class="btn btn-inicio" onclick="voltarInicio()">Início</button>
+    <button class="btn btn-sair" onclick="sair()">Sair</button>
+  </div>
+
+  <script>
+    const usuario = JSON.parse(localStorage.getItem('usuario'));
+    const logado = localStorage.getItem('logado');
+
+    if (logado !== 'true' || !usuario) {
+      window.location.href = '/pages/login/login.html';
+    } else {
+      document.getElementById('nome-usuario').textContent = usuario.nome;
+    }
+
+    function voltarInicio() {
+      window.location.href = '/pages/index/index.html'; // Altere se necessário
+    }
+
+    function sair() {
+      localStorage.removeItem('logado');
+      window.location.href = '/pages/login/login.html';
+    }
+  </script>
+
+</body>
+</html>

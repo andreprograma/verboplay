@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bem-vindo - VerboPlay</title>
+  <link rel="stylesheet" href="/assets/css/global/style.css" />
+  <style>
+    body {
+      background-color: #0f4d66;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .button-container {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn-sair {
+      background-color: #d9000d;
+      color: white;
+    }
+
+    .btn-sair:hover {
+      background-color: #b8000b;
+    }
+
+    .btn-prosseguir {
+      background-color: #e0a529;
+      color: white;
+    }
+
+    .btn-prosseguir:hover {
+      background-color: #c89020;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="mensagem-bemvindo">Bem-vindo(a)!</h1>
+
+  <div class="button-container">
+    <button class="btn btn-sair" onclick="sair()">Sair</button>
+    <button class="btn btn-prosseguir" onclick="prosseguir()">Prosseguir</button>
+  </div>
+
+  <script>
+    // Mostrar nome do usuário se estiver logado
+    const usuarioSalvo = JSON.parse(localStorage.getItem('usuario'));
+    const logado = localStorage.getItem('logado');
+
+    if (logado === 'true' && usuarioSalvo?.nome) {
+      document.getElementById('mensagem-bemvindo').textContent = `Bem-vindo(a), ${usuarioSalvo.nome}!`;
+    } else {
+      // Se não estiver logado, redireciona de volta ao login
+      window.location.href = '/pages/login/login.html';
+    }
+
+    function sair() {
+      localStorage.removeItem('logado');
+      window.location.href = '/pages/login/login.html';
+    }
+
+    function prosseguir() {
+      window.location.href = '/pages/usuario.html'; // Crie esta página futuramente
+    }
+  </script>
+
+</body>
+</html>
