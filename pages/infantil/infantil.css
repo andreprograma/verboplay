@@ -1,0 +1,30 @@
+/* Footer Styles */
+.footer {
+    background-color: #12506c;
+    padding: 1.0rem 0;
+    text-align: center;
+    border-top-left-radius: 30px;
+    border-top-right-radius:30px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.footer-logo {
+    height: 100px;
+    width: auto;
+}
+
+.copyright {
+    font-size: 0.875rem;
+    color: #ccc;
+}
