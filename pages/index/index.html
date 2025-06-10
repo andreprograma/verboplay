@@ -107,6 +107,7 @@
                                     <img src="/assets/media/images/imgfilmes/cancaodebernadet.png" alt="CANÇÃO DE BERNADET" class="content-img">
                                 </div>
                             </div>
+                            
                         </div>
                         
                         <button class="carousel-arrow carousel-arrow-right">
@@ -133,6 +134,7 @@
                                     <img src="/assets/media/images/imgseries/umagarotadef.png" alt="UMA GAROTA DE FE" class="content-img">
                                 </div>
                             </div>
+                            
                             <div class="carousel-item">
                                 <div class="content-card">
                                     <img src="/assets/media/images/imgseries/daniel.png" alt="DANIEL" class="content-img">
@@ -228,6 +230,23 @@
         function voltarUsuario() {
           window.location.href = '/pages/usuario.html';
         }
-      </script>
+        // carrossel ativado com o códigoo abaixo -->
+
+    document.querySelectorAll('.carousel-container').forEach(container => {
+      const leftBtn = container.querySelector('.carousel-arrow-left');
+      const rightBtn = container.querySelector('.carousel-arrow-right');
+      const items = container.querySelector('.carousel-items');
+    
+      const scrollAmount = 200; // Ajustandoo o espaçamento de cada clique nas setas de rolagem
+    
+      leftBtn.addEventListener('click', () => {
+        items.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      });
+    
+      rightBtn.addEventListener('click', () => {
+        items.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      });
+    });
+    </script>
 </body>
 </html>

@@ -281,6 +281,11 @@ button {
     font-size: 0.875rem;
     color: #ccc;
 }
+.logofooter img{
+    height: 100px;
+    width: auto;
+
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
