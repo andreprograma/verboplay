@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <button class="voltar-btn">&larr; Voltar</button>
+        <a href="../index/index.html"><button class="voltar-btn">&larr; Voltar</button></a>
     </div>
         <div>
     
@@ -19,13 +19,58 @@
                 Parte da sua contribuição também será destinada às instituições de caridade
                 que fazem a diferença. <br><strong>Juntos criamos um futuro melhor!</strong>
             </p>
-
-            <form>
-                <input type="text" placeholder="Seu nome (opcional)">
-                <input type="number" placeholder="Valor de sua doação">
+            <form id="formDoacao">
+                <input type="text" placeholder="Seu nome (opcional)" id="nome">
+                <input type="number" placeholder="Valor de sua doação" id="valor" required>
                 <button type="submit" class="doar-btn">Gerar QR code Pix</button>
             </form>
+            
+            <!-- Modal para mostrar o QR Code -->
+            <div id="modal">
+              <div id="modalContent">
+                <h3>Seu QR Code Pix</h3>
+                <img id="qrImage" src="" alt="QR Code Pix">
+                <br>
+                <button id="closeModal">Fechar</button>
+              </div>
+            </div>
+            
+            <script>
+              const form = document.getElementById('formDoacao');
+              const modal = document.getElementById('modal');
+              const qrImage = document.getElementById('qrImage');
+              const closeModal = document.getElementById('closeModal');
+            
+              form.addEventListener('submit', function(e) {
+                e.preventDefault(); // evita o envio do form e reload da página
+                
+                const valor = document.getElementById('valor').value;
+                if (!valor || valor <= 0) {
+                  alert('Por favor, informe um valor válido para a doação.');
+                  return;
+                }
+                            // a imagem é fixa e n é pix ativo é apenas para exemplo:
+            
+                // Exemplo: QR code Pix gerado (pode ser um link gerado via API)
+                const exemploQRCodeURL = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=PIX%20R$' + encodeURIComponent(valor);
+            
+                qrImage.src = exemploQRCodeURL;
+                modal.style.display = 'flex';
+              });
+            
+              closeModal.addEventListener('click', () => {
+                modal.style.display = 'none';
+              });
+            
+              // Também fechar modal clicando fora do conteúdo
+              modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                  modal.style.display = 'none';
+                }
+              });
+            </script>
         </div>
-    </div>
+  </head>
+  </div>
 </body>
 </html>

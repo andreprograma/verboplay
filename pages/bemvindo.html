@@ -70,7 +70,8 @@
     const logado = localStorage.getItem('logado');
 
     if (logado === 'true' && usuarioSalvo?.nome) {
-      document.getElementById('mensagem-bemvindo').textContent = `Bem-vindo(a), ${usuarioSalvo.nome}!`;
+      document.getElementById('mensagem-bemvindo').textContent = `Bem-vindo(a) ao VerboPlay, ${usuarioSalvo.nome}!` +  
+      `Prossiga para maratonar sua série favorita`;
     } else {
       // Se não estiver logado, redireciona de volta ao login
       window.location.href = '/pages/login/login.html';
