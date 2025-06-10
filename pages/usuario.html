@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Página do Usuário - VerboPlay</title>
   <link rel="stylesheet" href="/assets/css/global/style.css" />
+
   <style>
     body {
-      background-color: #0f4d66;
+      background-color: #12506c;
       color: white;
       font-family: 'Inter', sans-serif;
       text-align: center;
@@ -25,11 +27,13 @@
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      background-image: url('/assets/media/icons/fotousuario_padrao.png'); /* padrão */
+      background-image: url('/assets/media/icons/perfil.svg');
+      /* padrão */
       background-size: cover;
       background-position: center;
       border: 3px solid white;
       position: relative;
+      filter: brightness(0) invert(1);
     }
 
     h2 {
@@ -63,12 +67,12 @@
     }
 
     .btn-sair {
-      background-color: #d9000d;
+      background-color: #9B1C1C;
       color: white;
     }
 
     .btn-sair:hover {
-      background-color: #b8000b;
+      background-color: #9B1C1C;
     }
 
     /* Botão trocar foto */
@@ -77,6 +81,7 @@
       background-color: #28a745;
       color: white;
     }
+
     #btnTrocarFoto:hover {
       background-color: #1e7e34;
     }
@@ -87,6 +92,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <div class="perfil">
@@ -129,7 +135,7 @@
       const file = event.target.files[0];
       if (file && file.type.startsWith('image/')) {
         const reader = new FileReader();
-        reader.onload = function(e) {
+        reader.onload = function (e) {
           const base64Image = e.target.result;
           // Atualiza o background da foto
           fotoPerfilDiv.style.backgroundImage = `url(${base64Image})`;
@@ -155,4 +161,5 @@
   </script>
 
 </body>
+
 </html>

@@ -37,21 +37,21 @@
     }
 
     .btn-sair {
-      background-color: #d9000d;
+      background-color: #9B1C1C;
       color: white;
     }
 
     .btn-sair:hover {
-      background-color: #b8000b;
+      background-color: #9B1C1C;
     }
 
     .btn-prosseguir {
-      background-color: #e0a529;
+      background-color: #E8AB34;
       color: white;
     }
 
     .btn-prosseguir:hover {
-      background-color: #c89020;
+      background-color: #E8AB34;
     }
   </style>
 </head>
@@ -71,7 +71,7 @@
 
     if (logado === 'true' && usuarioSalvo?.nome) {
       document.getElementById('mensagem-bemvindo').textContent = `Bem-vindo(a) ao VerboPlay, ${usuarioSalvo.nome}!` +  
-      `Prossiga para maratonar sua série favorita`;
+      ` Prossiga para maratonar sua série favorita`;
     } else {
       // Se não estiver logado, redireciona de volta ao login
       window.location.href = '/pages/login/login.html';

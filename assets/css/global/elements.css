@@ -6,10 +6,12 @@
 
 .card {
     display: flex;
-    background-color: #101010;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.13);
     border-radius: 12px;
     overflow: hidden;
-    margin-bottom: 30px;
+    margin-top: 150px;
+    margin-bottom: 150px;
     padding: 20px;
 }
 
@@ -56,7 +58,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #00263b;
+    background-color: #12506c;
     padding: 20px;
     border-radius: 8px;
 }

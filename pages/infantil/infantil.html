@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Verbo Play - Streaming</title>
-        <link rel="stylesheet" href="/assets/css/global/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    </head>
-    <body>
-        <script src="./script.js"></script>
-        
-    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbo Play - Streaming</title>
+    <link rel="stylesheet" href="/assets/css/global/style.css">
+    <link rel="stylesheet" href="./infantil.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <script src="./script.js"></script>
+
+
     <!-- Header -->
     <header class="header">
         <div class="container header-container">
@@ -27,18 +32,23 @@
             <div class="header-right">
                 <div class="search-container">
                     <input type="text" placeholder="Pesquisar" class="search-input">
-                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
                 </div>
                 <div class="user-icon" style="display: flex; align-items: center; gap: 10px;">
                     <!-- Botão Voltar com ícone SVG de seta -->
-                    <button class="btn-voltar" aria-label="Voltar" onclick="voltarUsuario()" style="background:none; border:none; cursor:pointer; padding:0; margin:0;">
-                        <svg xmlns="/assets/media/icons/perfil.svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <button class="btn-voltar" aria-label="Voltar" onclick="voltarUsuario()"
+                        style="background:none; border:none; cursor:pointer; padding:0; margin:0;">
+                        <svg xmlns="/assets/media/icons/perfil.svg" width="20px" height="20px" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                             <circle cx="12" cy="7" r="4"></circle>
-                          </svg>
+                        </svg>
                     </button>
                 </div>
                 <div class="auth-buttons">
@@ -48,21 +58,133 @@
                 </div>
             </div>
         </div>
-    </div>
-</header>
+        </div>
+    </header>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="container footer-container">
-        <img src="/assets/media/icons/logo.svg" alt="Verbo Play" class="footer-logo">
-        <p class="copyright">Copyright © 2023 VerboPlay. Todos os direitos reservados.</p>
+    <!-- Infantil Carousel -->
+    <div class="carousel-section">
+        <h3 class="carousel-title">INFANTIL</h3>
+        <div class="carousel-container">
+            <button class="carousel-arrow carousel-arrow-left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+
+            <div class="carousel-items">
+                <div class="carousel-item">
+                    <div class="content-card">
+                        <img src="/assets/media/images/imginfantil/aarca.png" alt="A ARCA" class="content-img">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content-card">
+                        <img src="/assets/media/images/imginfantil/estreladebelem.png" alt="A ESTRELA DE BELEM"
+                            class="content-img">
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="content-card">
+                        <img src="/assets/media/images/imginfantil/josereidos.png" alt="JOSÉ REI" class="content-img">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content-card">
+                        <img src="/assets/media/images/imginfantil/modamarela.png" alt="MODA AMARELA"
+                            class="content-img">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content-card">
+                        <img src="/assets/media/images/imginfantil/principedoegito.png" alt="PRÍNCIPE DO EGITO"
+                            class="content-img">
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-arrow carousel-arrow-right">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
     </div>
-</footer>
-                
+    </section>
+    </div>
+
+    <div class="carousel-section">
+        <div class="carousel-container">
+            <button class="carousel-arrow carousel-arrow-left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+
+            <div class="carousel-items">
+                <div class="carousel-item">
+                    <div class="content-card">
+                        <img src="/assets/media/images/imginfantil/oamorvive.png" alt="AMOR VIVE" class="content-img">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content-card">
+                        <img src="/assets/media/images/imginfantil/namaa.png" alt="NAMÃA" class="content-img">
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="content-card">
+                        <img src="/assets/media/images/imginfantil/vidadejesus.png" alt="VIDA DE JESUS" class="content-img">
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+            <button class="carousel-arrow carousel-arrow-right">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+    </div>
+    </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <img src="/assets/media/icons/logo.svg" alt="Verbo Play" class="footer-logo">
+            <p class="copyright">Copyright © 2023 VerboPlay. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
     <script>
         function voltarUsuario() {
-          window.location.href = '/pages/usuario.html';
+            window.location.href = '/pages/usuario.html';
         }
-      </script>
+        document.querySelectorAll('.carousel-container').forEach(container => {
+            const leftBtn = container.querySelector('.carousel-arrow-left');
+            const rightBtn = container.querySelector('.carousel-arrow-right');
+            const items = container.querySelector('.carousel-items');
+
+            const scrollAmount = 200; // Ajustandoo o espaçamento de cada clique nas setas de rolagem
+
+            leftBtn.addEventListener('click', () => {
+                items.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+
+            rightBtn.addEventListener('click', () => {
+                items.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
+
 </html>

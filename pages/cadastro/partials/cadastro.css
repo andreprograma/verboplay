@@ -1,3 +1,23 @@
+* {
+  background-image: none;
+}
+
+html, body, section, .container {
+  background: none !important;
+  background-color: #12506c !important;
+}
+
+body {
+  background-color:#12506c !important;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 .logintela{
     padding: 3rem;
     text-align: center;
@@ -28,17 +48,22 @@
     border-color: brown;
     margin-bottom: auto;
     font-size: 15px;
-}.container, section {
-    padding: 10px;
-    justify-content: center;
-    margin: 0;
-    display: flex;
-    background-color: #0f4d66;
-    width: auto;  
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: auto;
-   
-  }
+}
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  max-width: 100%;
+  border-radius: 20px;
+}
   section .container{
      
       margin: 0;
@@ -46,7 +71,7 @@
       margin-left: 0;
   }
   .login-box {
-      background-color: #0b3e53;
+      background-color:#12506c;
     flex: 1;
     padding: 60px 40px;
     border-radius: 10px 0 0 10px;
@@ -68,12 +93,14 @@
   }
   
   
-  .input-field input {
+  .input-field input, 
+   #senha, #email, #nomecompleto {
     width: 100%;
     padding: 12px;
     border: none;
     border-radius: 6px;
     font-size: 16px;
+    box-sizing: border-box;
   }
   
   
@@ -91,7 +118,7 @@
   
   
   .login-button {
-    background-color: #e0a529;
+    background-color: #E8AB34;
     color: white;
     font-weight: bold;
     padding: 12px;
@@ -125,6 +152,11 @@
     align-items: center;
     text-align: center;
   }
+
+  .categories img {
+    filter: brightness(0) invert(1); /* muda o icone que estav preto para branco */
+  }
+
   .logo{
    
       display: flex;

@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Verbo Play - Streaming</title>
-        <link rel="stylesheet" href="/assets/css/global/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <script src="./script.js"></script>
-        
-        
-        
-        <!-- Header -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbo Play - Streaming</title>
+    <link rel="stylesheet" href="/assets/css/global/style.css">
+    <link rel="stylesheet" href="/pages/sinopsesfilmes/noesinopse.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <script src="./script.js"></script>
+
+
+
+    <!-- Header -->
     <header class="header">
         <div class="container header-container">
             <div class="header-left">
@@ -29,18 +34,23 @@
             <div class="header-right">
                 <div class="search-container">
                     <input type="text" placeholder="Pesquisar" class="search-input">
-                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
                 </div>
                 <div class="user-icon" style="display: flex; align-items: center; gap: 10px;">
                     <!-- Botão Voltar com ícone SVG de seta -->
-                    <button class="btn-voltar" aria-label="Voltar" onclick="voltarUsuario()" style="background:none; border:none; cursor:pointer; padding:0; margin:0;">
-                        <svg xmlns="/assets/media/icons/perfil.svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <button class="btn-voltar" aria-label="Voltar" onclick="voltarUsuario()"
+                        style="background:none; border:none; cursor:pointer; padding:0; margin:0;">
+                        <svg xmlns="/assets/media/icons/perfil.svg" width="20px" height="20px" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                             <circle cx="12" cy="7" r="4"></circle>
-                          </svg>
+                        </svg>
                     </button>
                 </div>
                 <div class="auth-buttons">
@@ -51,6 +61,7 @@
             </div>
         </div>
     </header>
+
     <body>
         <div class="container">
             <div class="card">
@@ -58,63 +69,66 @@
                 <div class="content">
                     <h2>SINOPSE</h2>
                     <p>
-                        Noé vive com a esposa Naameh e os filhos Sem, Cam e Jafé em um mundo devastado pelo pecado, onde os homens perseguem e matam uns aos outros. 
-                        Um dia, Noé recebe uma missão divina: construir uma imensa arca para abrigar os animais durante um dilúvio.
+                        Noé vive com a esposa Naameh e os filhos Sem, Cam e Jafé em um mundo devastado pelo pecado, onde
+                        os homens perseguem e matam uns aos outros.
+                        Um dia, Noé recebe uma missão divina: construir uma imensa arca para abrigar os animais durante
+                        um dilúvio.
                     </p>
                     <button class="assistir-btn" id="btnAssistir">Assistir</button>
                     <div class="add-lista">+ Adicionar à lista</div>
                 </div>
             </div>
-                        <!-- Modal para vídeo (janela que aparece ao clicar em assistir)-->
+            <!-- Modal para vídeo (janela que aparece ao clicar em assistir)-->
             <div id="modalVideo" class="modal-video" style="display:none;">
                 <div class="modal-video-content">
-                <button id="btnFecharVideo" class="fechar-video-btn" aria-label="Fechar vídeo">&times;</button>
-                <video id="videoPlayer" width="100%" controls>
-                    <source src="/videos/NOÉ - Trailer oficial - verboPlay.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeo HTML5.
-                </video>
+                    <button id="btnFecharVideo" class="fechar-video-btn" aria-label="Fechar vídeo">&times;</button>
+                    <video id="videoPlayer" width="100%" controls>
+                        <source src="/videos/NOÉ - Trailer oficial - verboPlay.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo HTML5.
+                    </video>
                 </div>
             </div>
-                     <!-- video js (janela que aparece ao clicar em assistir)-->
+            <!-- video js (janela que aparece ao clicar em assistir)-->
 
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
-                  const btnAssistir = document.getElementById('btnAssistir');
-                  const modalVideo = document.getElementById('modalVideo');
-                  const btnFecharVideo = document.getElementById('btnFecharVideo');
-                  const videoPlayer = document.getElementById('videoPlayer');
-              
-                  // Abrir modal e iniciar vídeo
-                  btnAssistir.addEventListener('click', () => {
-                    modalVideo.style.display = 'flex';
-                    videoPlayer.play();
-                  });
-              
-                  // Fechar modal e pausar vídeo
-                  btnFecharVideo.addEventListener('click', () => {
-                    videoPlayer.pause();
-                    videoPlayer.currentTime = 0; // reinicia o vídeo
-                    modalVideo.style.display = 'none';
-                  });
-              
-                  // Fechar modal clicando fora do conteúdo do vídeo
-                  modalVideo.addEventListener('click', (event) => {
-                    if (event.target === modalVideo) {
-                      videoPlayer.pause();
-                      videoPlayer.currentTime = 0;
-                      modalVideo.style.display = 'none';
-                    }
-                  });
+                    const btnAssistir = document.getElementById('btnAssistir');
+                    const modalVideo = document.getElementById('modalVideo');
+                    const btnFecharVideo = document.getElementById('btnFecharVideo');
+                    const videoPlayer = document.getElementById('videoPlayer');
+
+                    // Abrir modal e iniciar vídeo
+                    btnAssistir.addEventListener('click', () => {
+                        modalVideo.style.display = 'flex';
+                        videoPlayer.play();
+                    });
+
+                    // Fechar modal e pausar vídeo
+                    btnFecharVideo.addEventListener('click', () => {
+                        videoPlayer.pause();
+                        videoPlayer.currentTime = 0; // reinicia o vídeo
+                        modalVideo.style.display = 'none';
+                    });
+
+                    // Fechar modal clicando fora do conteúdo do vídeo
+                    modalVideo.addEventListener('click', (event) => {
+                        if (event.target === modalVideo) {
+                            videoPlayer.pause();
+                            videoPlayer.currentTime = 0;
+                            modalVideo.style.display = 'none';
+                        }
+                    });
                 });
-              </script>
-              
-  
-            <footer>
-                <div class="logofooter"><img src="/assets/media/icons/Logotiposemfundo.svg" alt=""></div>
-                <p>Copyright © 2025 VerboPlay. Todos os direitos reservados.</p>
-                <button class="doar-btn">Doe para Verbo Play</button>
+            </script>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="container footer-container">
+                    <img src="/assets/media/icons/logo.svg" alt="Verbo Play" class="footer-logo">
+                    <p class="copyright">Copyright © 2023 VerboPlay. Todos os direitos reservados.</p>
+                </div>
             </footer>
         </div>
     </body>
-    </html>
-    
+
+</html>

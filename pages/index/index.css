@@ -166,6 +166,8 @@ button {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .carousel-items {
@@ -226,11 +228,11 @@ button {
 }
 
 .carousel-arrow-left {
-    left: 0;
+    left: -70px;
 }
 
 .carousel-arrow-right {
-    right: 0;
+    right: -70px;
 }
 
 /* Footer Styles */

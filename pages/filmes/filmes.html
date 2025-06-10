@@ -54,6 +54,103 @@
         </div>
     </header>
 
+    <!-- Filmes Carousel -->
+    <div class="carousel-section">
+        <h3 class="carousel-title">FILMES</h3>
+        <div class="carousel-container">
+            <button class="carousel-arrow carousel-arrow-left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            
+            <div class="carousel-items">
+                <div class="carousel-item">
+                    <div class="content-card">
+                       <a href="/pages/sinopsesfilmes/noesinopsenoe.html"><img src="/assets/media/images/imgfilmes/noefilme.jpg" alt="NOÉ" class="content-img"></a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content-card">
+                        <img src="/assets/media/images/imgfilmes/paulo.png" alt="PAULO" class="content-img">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content-card">
+                        <img src="/assets/media/images/imgfilmes/lutero.png" alt="LUTERO" class="content-img">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content-card">
+                        <img src="/assets/media/images/imgfilmes/santmaria.png" alt="SANTA MARIA" class="content-img">
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="content-card">
+                        <img src="/assets/media/images/imgfilmes/doispapa.png" alt="DOIS PAPA" class="content-img">
+                    </div>
+                </div>
+                
+            </div>
+            
+            <button class="carousel-arrow carousel-arrow-right">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Filmes Carousel -->
+    <div class="carousel-section">
+        <div class="carousel-container">
+            <button class="carousel-arrow carousel-arrow-left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            
+            <div class="carousel-items">
+
+                <div class="carousel-item">
+                    <div class="content-card">
+                        <img src="/assets/media/images/imgfilmes/irmdulc.jpg" alt="IRMÃ DULCE" class="content-img">
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <div class="content-card">
+                        <img src="/assets/media/images/imgfilmes/aquedadejerus.png" alt="A QUEDA DE JESUS" class="content-img">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content-card">
+                        <img src="/assets/media/images/imgfilmes/cancaodebernadet.png" alt="CANÇÃO DE BERNADET" class="content-img">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content-card">
+                        <img src="/assets/media/images/imgfilmes/14estacmari.png" alt="14 ESTAÇÃO MARIA" class="content-img">
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="content-card">
+                        <img src="/assets/media/images/imgfilmes/fatima.png" alt="fatima" class="content-img">
+                    </div>
+                </div>
+                
+            </div>
+            
+            <button class="carousel-arrow carousel-arrow-right">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+    </div>
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -67,6 +164,22 @@
         function voltarUsuario() {
           window.location.href = '/pages/usuario.html';
         }
+
+        document.querySelectorAll('.carousel-container').forEach(container => {
+      const leftBtn = container.querySelector('.carousel-arrow-left');
+      const rightBtn = container.querySelector('.carousel-arrow-right');
+      const items = container.querySelector('.carousel-items');
+    
+      const scrollAmount = 196; // Ajustandoo o espaçamento de cada clique nas setas de rolagem
+    
+      leftBtn.addEventListener('click', () => {
+        items.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      });
+    
+      rightBtn.addEventListener('click', () => {
+        items.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      });
+    });
       </script>
       </body>
       </html>
