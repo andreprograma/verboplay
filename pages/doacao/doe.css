@@ -40,7 +40,6 @@ body {
     padding: 40px 30px;
     border-radius: 10px;
     text-align: center;
-    margin-bottom: 250px;
 }
 
 .form-box h1 {
@@ -108,7 +107,7 @@ form input {
   #closeModal {
     margin-top: 15px;
     cursor: pointer;
-    background-color: #f44336;
+    background-color: #9B1C1C;
     color: white;
     border: none;
     padding: 8px 15px;
