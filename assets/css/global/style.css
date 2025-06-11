@@ -407,10 +407,10 @@ button {
 }
 
 .fechar-video-btn {
-    position: absolute;
+    position: relative;
     top: 5px;
     right: 10px;
-    font-size: 30px;
+    font-size: 50px;
     color: white;
     background: transparent;
     border: none;
